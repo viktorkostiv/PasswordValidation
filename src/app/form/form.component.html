@@ -1,0 +1,12 @@
+<form class="form">
+  <div class="input-wrapper">
+    <p>Password :</p>
+    <input type="text" (input)="onUpdatePassword($event)" (input)="PasswordValidation()">
+    <div class="validation-scale"
+      [ngClass]="{strongPassword: validationLevel === 4, mediumPassword: validationLevel === 3, easyPassword: validationLevel === 2, invalidPassword: validationLevel === 1}">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</form>
